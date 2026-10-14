@@ -1,0 +1,97 @@
+istema de gestión de patentes por consola en Python:
+Una empresa necesita desarrollar un sistema para administrar las patentes de los automóviles
+registrados.
+El sistema deberá trabajar con patentes del formato AB123CD, es decir, dos letras mayúsculas
+seguidas de tres números y dos letras mayúsculas al final.
+Ejemplos válidos:
+AB123CD
+AA001GT
+JT582QJ
+MP031ZP
+Las patentes deberán almacenarse en una lista.
+El programa deberá contar con el siguiente menú de opciones:
+===== SISTEMA DE PATENTES =====
+1. Generar patentes.
+2. Buscar patente.
+3. Informar estadísticas.
+4. Ordenar y mostrar patentes.
+5. Salir.
+==============================
+1
+Solicitar al usuario la cantidad de patentes que desea agregar y generar aleatoriamente dicha cantidad.
+Cada patente generada deberá estar formada por:
+● Dos letras mayúsculas.
+● Tres números.
+● Dos letras mayúsculas.
+Los caracteres deberán generarse utilizando chr() y valores correspondientes al código ASCII.
+* No se permite utilizar una lista/string como: letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ", para la
+generación de caracteres.
+Las patentes generadas deberán almacenarse en una lista.
+No se deberán generar patentes repetidas. Al generar una nueva patente, verificar, a través de una
+función, si la misma no se repite en la lista, de lo contrario, descartarla y generar una nueva patente.
+Si ya existen patentes almacenadas, las nuevas deberán agregarse a la lista sin eliminar las anteriores.
+Por ejemplo: el usuario generó 85 patentes, y después de mostrar el informe decidió generar y agregar
+25 patentes adicionales. En total la lista deberá contener 110 patentes.
+2. Buscar patente.
+Solicitar al usuario una patente para buscar.
+Antes de realizar la búsqueda, se deberá validar que la patente ingresada tenga el formato
+correcto:
+● Longitud de 7 caracteres.
+● Los primeros dos caracteres deben ser letras mayúsculas.
+● Seguidos de tres caracteres numéricos.
+● Al final dos letras mayúsculas.
+Si la patente posee un formato incorrecto, se deberá informar el error y no realizar la búsqueda.
+De lo contrario, informar si la patente fue encontrada o no.
+2
+3. Informar estadísticas.
+El sistema deberá informar las siguientes estadísticas sobre las patentes almacenadas:
+a) Patente más vieja y más nueva
+Para determinar la patente más vieja y la más nueva se deberá considerar el número de patente, es
+decir, los tres caracteres numéricos.
+Por ejemplo: La patente más vieja será: y la más nueva:
+AB125DC
+XY032JT XY032JT
+KT587AN KT587AN
+b) Porcentaje según letra inicial
+Informar qué porcentaje de las patentes comienza con cada letra del abecedario.
+Por ejemplo:
+A: 12.50%
+B: 0.00%
+C: 6.25%
+...
+Z: 3.12%
+4. Ordenar y mostrar patentes.
+Solicitar al usuario el criterio de ordenamiento:
+- ASC (para ordenar ascendentemente).
+- DESC (para ordenar descendentemente).
+Validar que la opción ingresada sea correcta.
+Luego, ordenar las patentes utilizando una función propia de ordenamiento burbujeo.
+Finalmente, mostrar todas las patentes en el orden seleccionado.
+3
+Ejemplo:
+Patentes ordenadas ASCENDENTEMENTE:
+AB123AD
+AB587AC
+KT031GT
+MP482RQ
+XY999KF
+5. Salir.
+Finalizar la ejecución del programa.
+Objetivos de Aprobación No Directa (Calificación de 4 a 5 puntos):
+Deberán estar realizados en su totalidad los ítems 1, 2, 3 y 5.
+Objetivos de Aprobación Directa (Calificación de 6 a 10 puntos):
+Deberán estar realizados en su totalidad los ítems 1, 2, 3, 4 y 5.
+En ambos casos, las calificaciones estarán sujetas a la defensa oral del examen entregado.
+NOTAS:
+Nota 1: Los puntos deberán ser accedidos mediante un menú de opciones.
+Nota 2: No se podrá acceder a los ítems:
+● 2, 3 y 4: sin antes haber generado la lista de manera aleatoria (ítem 1).
+En tal sentido, realizar las validaciones correspondientes (utilizando banderas).
+Nota 3: Normalizar los datos ingresados por consola en el punto 4.
+El usuario puede ingresar “Asc”, “aSC” o “DeSc” e igualmente será un string válido.
+También deberán normalizarse los caracteres para realizar la búsqueda del punto 2.
+Nota 4: No se permite la utilización de métodos para la manipulación de listas y strings.
+Nota 5: Se deberá desarrollar la biblioteca “funciones.py” que contendrá todas las funciones propias,
+las mismas deberán estar correctamente documentadas.
+Nota 6: El menú y todas las variables necesarias para el funcionamiento del programa estarán
+contenidas en el programa principal “examen.py”
